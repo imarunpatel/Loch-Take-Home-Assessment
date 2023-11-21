@@ -1,3 +1,23 @@
+# Loch Take Home Assessment
+
+This project aims to provide an engaging and responsive landing page for Loch. The design is meticulously crafted to capture user attention, and the functionalities are designed to enhance the user experience. Whether you are accessing the page from a desktop or a mobile device, Loch promises a seamless and visually appealing experience.
+
+
+## Features
+
+- Responsive design for desktop and mobile browsers
+- Testimonials at the bottom with draggable functionality
+- Infinite carousel for notification settings
+- Responsive textbox on hover and click
+- Email validation with error message
+- Redirect to [https://app.loch.one/welcome](https://app.loch.one/welcome) after submission
+
+## Technologies Used
+
+- React
+- TailwindCss
+
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
