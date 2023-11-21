@@ -6,7 +6,7 @@ import Logo from "../../../assets/images/logo.png";
 const Testimonial = () => {
   const testimonials: ITestimonial[] = TestimonialData;
   const containerRef = useRef<HTMLDivElement | null>(null);
-  const [scrollLeft, setScrollLeft] = useState(0);
+  const [scrollLeft] = useState(0);
 
   const handleDragStart = (e: React.DragEvent<HTMLDivElement>) => {
     e.preventDefault();
@@ -31,8 +31,8 @@ const Testimonial = () => {
 
   return (
     <div>
-      <div className="text-center text-2xl text-[#FEFEFE]">Testimonials</div>
-      <hr className="mt-5 mb-14" />
+      {/* <div className="text-center text-2xl text-[#FEFEFE]">Testimonials</div>
+      <hr className="mt-5 mb-14" /> */}
       <div className="flex flex-col-reverse md:flex-row items-center md:items-end gap-5">
         <img src={Logo} className="mb-4" alt="" width={60} height={60} />
         <div className="w-full" style={{ overflow: "hidden" }}>

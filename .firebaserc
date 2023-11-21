@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "arun-patel-7332b"
+  },
+  "targets": {
+    "arun-patel-7332b": {
+      "hosting": {
+        "loch-dashboard": [
+          "arun-patel-7332b"
+        ]
+      }
+    }
+  }
+}

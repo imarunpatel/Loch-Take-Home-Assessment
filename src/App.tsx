@@ -4,18 +4,20 @@ import SignUp from "./Components/Signup/SignUp";
 import Main from "./Components/Main/Main";
 
 function App() {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(
-    window.innerWidth < 1024 ? false : true
-  );
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   const handleToggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
 
   useEffect(() => {
+    setIsSidebarOpen(window.innerWidth < 1024 ? false : true);
+
     const handleResize = () => {
       window.addEventListener("resize", () => {
-        setIsSidebarOpen(window.innerWidth < 1024 ? false : true);
+        if (window.innerWidth > 1000) {
+          setIsSidebarOpen(window.innerWidth < 1024 ? false : true);
+        }
       });
     };
 

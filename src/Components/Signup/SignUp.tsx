@@ -1,5 +1,6 @@
 import React, { FC, useState } from "react";
 import "./SignUp.css";
+import CrossIcon from '../../assets/icons/cross.png';
 
 interface Props {
   isOpen: boolean;
@@ -25,8 +26,9 @@ const SignUp: FC<Props> = (props) => {
 
   const handleSubmit = () => {
     setSubmitted(true);
+    setIsValid(validateEmail(email))
     if (!validateEmail(email)) return;
-    window.location.href = `https://app.loch.one/welcome.?email=${email}`;
+    window.location.href = `https://app.loch.one/welcome?email=${email}`;
 
   };
 
@@ -38,14 +40,14 @@ const SignUp: FC<Props> = (props) => {
     >
       <button
         onClick={props.onClose}
-        className="absolute top-3 right-3 z-50 lg:hidden block"
+        className="absolute top-3 right-3 z-50 lg:hidden block cursor-pointer"
       >
-        Close
+        <img src={CrossIcon} alt="" width={30} />
       </button>
 
-      <div className="w-[364px] flex flex-col gap-6">
+      <div className="w-[400px] flex flex-col gap-6">
         <div className="text-gray-300 text-3xl font-medium mb-2 mx-3">
-          Signup for exclusive access.
+          Sign up for exclusive access.
         </div>
         <div className="mx-3 flex flex-col relative">
           <input
@@ -61,7 +63,7 @@ const SignUp: FC<Props> = (props) => {
         <button onClick={handleSubmit} className="btn-getstarted mx-3 mt-3">
           Get started
         </button>
-        <p className="m-[18px] text-[#19191A] font-semibold">
+        <p className="m-[18px] text-[#19191A] font-semibold text-[16px]">
           You'll receive an email with an invite link to join
         </p>
       </div>
@@ -69,10 +71,5 @@ const SignUp: FC<Props> = (props) => {
   );
 };
 
-const styles = {
-  signup: {
-    backgroundColor: "red",
-  },
-};
 
 export default SignUp;
