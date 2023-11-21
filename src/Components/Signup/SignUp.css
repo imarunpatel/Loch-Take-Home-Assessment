@@ -1,0 +1,47 @@
+.signup {
+  width:40vw !important;
+}
+
+@media (max-width: 960px) {
+  .signup {
+    width:80vw !important;
+  }
+}
+
+@media (max-width: 500px) {
+  .signup {
+    width:100vw !important;
+  }
+}
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -150vh; 
+  height: 100%;
+  background-color: #fff;
+  transition: right 0.3s ease; 
+  box-shadow: 0px 14px 64px -4px rgba(24, 39, 75, 0.12),
+    0px 8px 22px -6px rgba(24, 39, 75, 0.12);
+}
+
+.sidebar.open {
+  right: 0;
+}
+
+.email-input {
+  padding: 20px 28px;
+  border: 1px solid var(--grey-100, #e5e5e6);
+  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.04),
+    0px 4px 10px 0px rgba(0, 0, 0, 0.04);
+  border-radius: 8px;
+  color: black;
+}
+
+.btn-getstarted {
+  border-radius: 8px;
+  border: 1px solid var(--grey-900, #19191a);
+  background: var(--grey-900, #19191a);
+  padding: 18px 28px;
+  color: #fff;
+}
+
